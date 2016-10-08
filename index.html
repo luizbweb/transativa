@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Transativa FM
+        </title>
+    </head>
+    <style>
+        body {
+            background-color: black;
+        }
+        .player {
+            background-color: black;
+            width: 100%;
+            height: 15%;
+        }
+        .play {
+            width: 100%;
+            float: left;
+            text-align: center;
+        }
+        .conteudo {
+            background-color: black;
+            background-image: url('images/fundo-transativa.jpg');
+            width: 100%;
+            height: 70%;
+        }
+        .rodape {
+            background-color: black;
+            background-image: url('anuncios/supercompras.jpg');
+            background-position: center;
+            width: 100%;
+            height: 15%;
+        }
+        audio {
+            width: 100%;
+        }
+    
+    </style>
+    <body>
+        <div class="player">
+            <div class="play">
+            <audio controls autoplay>
+                <source src="http://radio.server6.com.br:9338/;&topspeed=on" type="audio/mpeg">
+            </audio>
+            <img src="http://radio.radiotransativa.com/img/img-player-vu-meter.gif" style="margin: 0 0 0 0px;" height="40" width="100%">
+            </div>
+        </div>
+        <div class="conteudo">
+        </div>
+        <div class="rodape">
+        </div>
+    </body>
+</html>
