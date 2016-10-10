@@ -1,0 +1,11 @@
+  <widget id="com.exemplo.transativa" version="0.0.1">
+        <name>Radio Transativa</name>
+        <description>
+            A sample Apache Cordova application that responds to the deviceready event.
+        </description>
+        <author email="luizbweb@gmail.com" href="http://waw.net.br">
+            Luiz Bruno
+        </author>
+        <content src="index.html" />
+        <access origin="*" />
+    </widget>
