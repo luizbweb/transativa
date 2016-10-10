@@ -37,11 +37,16 @@
         }
     
     </style>
+    <script>
+        function loadURL(url) {
+            navigator.app.loadUrl(url, {openExternal:true});
+        }
+    </script>
     <body>
         <div class="player">
             <div class="play">
             <audio controls autoplay>
-                <source src="http://radio.server6.com.br:9338/;&topspeed=on" type="audio/mpeg">
+                <source src="loadURL(http://radio.server6.com.br:9338/);&topspeed=on" type="audio/mpeg">
             </audio>
             <img src="http://radio.radiotransativa.com/img/img-player-vu-meter.gif" style="margin: 0 0 0 0px;" height="40" width="100%">
             </div>
