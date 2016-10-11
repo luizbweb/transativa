@@ -7,6 +7,9 @@
             Luiz Bruno
         </author>
         <content src="index.html" />
-        <access origin="http://radio.server6.com.br:9338/" />
-        <access origin="http://radio.radiotransativa.com/img/img-player-vu-meter.gif" />
+        <access origin="http://radio.server6.com.br:9338/" browserOnly="true"/>
+        <access origin="http://radio.radiotransativa.com/img/img-player-vu-meter.gif" browserOnly="true"/>
+        <access origin="http://*.phonegap.com"/>
+        <access origin="*"/>
+        <log level="DEBUG"/>
     </widget>
