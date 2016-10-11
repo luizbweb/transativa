@@ -1,4 +1,8 @@
-  <widget id="com.exemplo.transativa" version="0.0.1">
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "com.phonegap.example"
+    version     = "0.0.1" >  
         <name>Radio Transativa</name>
         <description>
             A sample Apache Cordova application that responds to the deviceready event.
@@ -6,10 +10,14 @@
         <author email="luizbweb@gmail.com" href="http://waw.net.br">
             Luiz Bruno
         </author>
-        <content src="index.html" />
-        <access origin="http://radio.server6.com.br:9338/" browserOnly="true"/>
-        <access origin="http://radio.radiotransativa.com/img/img-player-vu-meter.gif" browserOnly="true"/>
-        <access origin="http://*.phonegap.com"/>
+        <plugin name="cordova-plugin-device" />
+        <plugin name="cordova-plugin-file-transfer" />
+        <plugin name="cordova-plugin-media" />
+        <plugin name="cordova-plugin-network-information" />
+        <content src="www/index.html" />
         <access origin="*"/>
+        <plugin name="cordova-plugin-whitelist" version="1" />
+        <allow-intent href="http://*/*" />
+        <allow-intent href="https://*/*" />
         <log level="DEBUG"/>
     </widget>
