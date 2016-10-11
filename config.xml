@@ -7,5 +7,6 @@
             Luiz Bruno
         </author>
         <content src="index.html" />
-        <access origin="*" />
+        <access origin="http://radio.server6.com.br:9338/;&topspeed=on" />
+        <access origin="http://radio.radiotransativa.com/img/img-player-vu-meter.gif" />
     </widget>
