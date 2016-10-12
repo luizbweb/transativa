@@ -14,7 +14,6 @@
         <plugin name="cordova-plugin-file-transfer" />
         <plugin name="cordova-plugin-media" />
         <plugin name="cordova-plugin-network-information" />
-        <content src="index.html" />
         <access origin="*"/>
         <plugin name="cordova-plugin-whitelist" version="1" />
         <allow-intent href="http://*/*" />
