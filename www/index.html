@@ -12,7 +12,7 @@
         .player {
             background-color: black;
             width: 100%;
-            height: 15%;
+            height: 20%;
         }
         .play {
             width: 100%;
@@ -22,13 +22,13 @@
         audio {
             width: 100%;
         }
-        
         .conteudo {
-            background-color: black;
+            background-color: white;
             background-image: url('img/fundo-transativa.jpg');
             background-position: center;
+            background-repeat: no-repeat;
             width: 100%;
-            height: 70%;
+            height: 59%;
         }
         .rodape {
             background-color: black;
@@ -38,6 +38,17 @@
         .anuncio {
             width: 100%;
         }
+        .sombra-up, .sombra-down {
+            width: 100%;
+            height: 2%;
+        }
+        .sombra-down {
+            background-image: linear-gradient(to bottom, white, darkgray);
+        }
+        .sombra-up {
+            background-image: linear-gradient(to bottom, darkgray, white);
+        }
+        
     
     </style>
     <body>
@@ -46,7 +57,7 @@
             <audio controls autoplay>
                 <source src="http://radio.server6.com.br:9338/;stream.mp3" type="audio/mpeg"></source>
             </audio>
-            <img src="http://radio.radiotransativa.com/img/img-player-vu-meter.gif" style="margin: 0 0 0 0px;" height="40" width="100%">
+            <img src="http://radio.radiotransativa.com/img/img-player-vu-meter.gif" style="margin: 0 0 0 0px;" height="40px" width="100%">
             </div>
         </div>
         <div class="sombra-up">
