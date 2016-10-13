@@ -50,9 +50,6 @@
             background-image: linear-gradient(to bottom, darkgray, white);
         }
     </style>
-    <script>
-        
-    </script>
     <body>
         <div class="player">
             <div class="play">
@@ -69,7 +66,24 @@
         <div class="sombra-down">
         </div>
         <div class="rodape">
-            <img class="anuncio" src="img/supercompras.jpg" />
+            <img id="anuncio" class="anuncio" src="img/supercompras.jpg" />
         </div>
+    <script>
+        var img = document.getElementById('anuncio');
+        var n = 1;
+        function mudaAnuncio() {
+            try {
+                img.src = 'img/' + n + '.jpg';
+                n += 1;
+                if (n>9){
+                    n = 1;
+                }
+            }
+            catch (err) {
+                n = 1;
+            }
+        }
+        setInterval (mudaAnuncio, 3000);
+    </script>
     </body>
 </html>
