@@ -10,6 +10,7 @@
         <author email="luizbweb@gmail.com" href="http://waw.net.br">
             Luiz Bruno
         </author>
+        <icon src="icon.png" />
         <plugin name="cordova-plugin-device" />
         <plugin name="cordova-plugin-file-transfer" />
         <plugin name="cordova-plugin-media" />
