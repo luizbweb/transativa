@@ -2,13 +2,13 @@
 <widget xmlns   = "http://www.w3.org/ns/widgets"
     xmlns:gap   = "http://phonegap.com/ns/1.0"
     id          = "com.phonegap.example"
-    version     = "0.0.1" >  
-        <name>Radio Show</name>
+    version     = "0.0.2" >
+        <name>Radio Show 99,5 FM</name>
         <description>
-            A sample Apache Cordova application that responds to the deviceready event.
+            Aplicativo da Radio Show 99,5 FM
         </description>
-        <author email="luizbweb@gmail.com" href="http://waw.net.br">
-            Luiz Bruno
+        <author email="comercialradioshow@gmail.com" href="">
+            Radio Show
         </author>
         <icon src="icon.png" />
         <plugin name="cordova-plugin-device" />
@@ -17,6 +17,7 @@
         <plugin name="cordova-plugin-network-information" />
         <access origin="*"/>
         <plugin name="cordova-plugin-whitelist" version="1" />
+        <preference name="Orientation" value="portrait" />
         <allow-intent href="http://*/*" />
         <allow-intent href="https://*/*" />
         <log level="DEBUG"/>
