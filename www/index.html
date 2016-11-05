@@ -54,7 +54,7 @@
         <div class="player">
             <div class="play">
             <audio controls autoplay>
-                <source src="http://radio.server6.com.br:9338/;stream.mp3" type="audio/mpeg"></source>
+                <source src="http://78.129.190.50:18980;stream.mp3" type="audio/mpeg"></source>
             </audio>
             <img src="http://radio.radiotransativa.com/img/img-player-vu-meter.gif" style="margin: 0 0 0 0px;" height="40px" width="100%">
             </div>
@@ -62,28 +62,101 @@
         <div class="sombra-up">
         </div>
         <div class="conteudo">
+             <form id="form" method="post">
+                <input type="hidden" name="curti" value="curti">
+                <input id="time" type="hidden" name="time" value="">
+                <input id="curtir" type="submit" value="Curtir">
+            </form>
+            <form id="form2" method="post">
+                <input type="hidden" name="curti" value="descurti">
+                <input id="time" type="hidden" name="time" value="">
+                <input id="descurtir" type="submit" value="Descurtir">
+            </form>
         </div>
         <div class="sombra-down">
         </div>
         <div class="rodape">
             <img id="anuncio" class="anuncio" src="img/supercompras.jpg" />
         </div>
-    <script>
-        var img = document.getElementById('anuncio');
-        var n = 1;
-        function mudaAnuncio() {
-            try {
-                img.src = 'img/' + n + '.jpg';
-                n += 1;
-                if (n>9){
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+        <script>
+            function marcaHora() {
+                var dataHora = new Date().getTime();
+                $('#time').val(dataHora);
+            }
+            marcaHora();
+
+            $('input[id=descurtir]').click(function(e){
+            //setamos para quando submeter não atualizar a pagina
+                e.preventDefault();
+            //o serialize retorna uma string pronta para ser enviada
+            var valores = $('#form2').serialize()
+            console.log(valores);
+            //iniciamos o ajax
+                $.ajax({
+                //definimos a url
+                    url : 'http://luizbweb.esy.es/transativa/anuncios/voto.php',
+                //definimos o tipo de requisição
+                    type: 'post',
+                //definimos o tipo de retorno
+                    dataType : 'html',
+                //colocamos os valores a serem enviados
+                    data: valores,
+                //antes de enviar ele alerta para esperar
+                    beforeSend : function(){
+                        $('#carregando').show('100');
+                    },
+                //colocamos o retorno na tela
+                    success : function(pre){
+                        $('#carregando').hide('100');
+                        $('#retorno').find('strong').text(pre).end().show(100);
+                    }
+                });
+            });
+
+            $('input[id=curtir]').click(function(e){
+            //setamos para quando submeter não atualizar a pagina
+                e.preventDefault();
+            //o serialize retorna uma string pronta para ser enviada
+            var valores = $('#form').serialize()
+            console.log(valores);
+            //iniciamos o ajax
+                $.ajax({
+                //definimos a url
+                    url : 'http://luizbweb.esy.es/transativa/anuncios/voto.php',
+                //definimos o tipo de requisição
+                    type: 'post',
+                //definimos o tipo de retorno
+                    dataType : 'html',
+                //colocamos os valores a serem enviados
+                    data: valores,
+                //antes de enviar ele alerta para esperar
+                    beforeSend : function(){
+                        $('#carregando').show('100');
+                    },
+                //colocamos o retorno na tela
+                    success : function(pre){
+                        $('#carregando').hide('100');
+                        $('#retorno').find('strong').text(pre).end().show(100);
+                    }
+                });
+            });
+
+            var img = document.getElementById('anuncio');
+            var n = 1;
+            function mudaAnuncio() {
+                try {
+                    img.src = 'img/' + n + '.jpg';
+                    n += 1;
+                    if (n>9){
+                        n = 1;
+                    }
+                }
+                catch (err) {
                     n = 1;
                 }
             }
-            catch (err) {
-                n = 1;
-            }
-        }
-        setInterval (mudaAnuncio, 3000);
-    </script>
+            setInterval (mudaAnuncio, 3000);
+        </script>
     </body>
 </html>
