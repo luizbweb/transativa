@@ -31,6 +31,40 @@
             width: 100%;
             height: 59%;
         }
+        .form, .form2 {
+            position: relative;
+            background-color: rgba(0,0,0,0.7);
+        }
+        .form {
+            float: right;
+            top: 44%;
+            border-bottom-left-radius: 35px;
+            border-top-left-radius: 35px;
+        }
+        #curtir {
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+        #curtir:active {
+            background-image: url("img/active-curtir.png");
+            background-repeat: no-repeat;
+            background-position: 8px 9px;
+        }
+        #descurtir {
+            padding-top: 12px;
+            padding-right: 10px;
+        }
+        #descurtir:active {
+            background-image: url("img/active-descurtir.png");
+            background-repeat: no-repeat;
+            background-position: -1px 11px;
+        }
+        .form2 {
+            float: left;
+            top: 44%;
+            border-bottom-right-radius: 35px;
+            border-top-right-radius: 35px;
+        }
         .rodape {
             background-color: black;
             width: 100%;
@@ -62,16 +96,20 @@
         <div class="sombra-up">
         </div>
         <div class="conteudo">
-             <form id="form" method="post">
-                <input type="hidden" name="curti" value="curti">
-                <input id="time" type="hidden" name="time" value="">
-                <input id="curtir" type="submit" value="Curtir">
-            </form>
-            <form id="form2" method="post">
-                <input type="hidden" name="curti" value="descurti">
-                <input id="time" type="hidden" name="time" value="">
-                <input id="descurtir" type="submit" value="Descurtir">
-            </form>
+            <div class="form2">
+                <form id="form2" method="post">
+                    <input type="hidden" name="curti" value="descurti">
+                    <input id="time" type="hidden" name="time" value="">
+                    <input id="descurtir" src="img/descurtir.png" type="image" value="Descurtir">
+                </form>
+            </div>
+            <div class="form">
+                <form id="form" method="post">
+                    <input type="hidden" name="curti" value="curti">
+                    <input id="time" type="hidden" name="time" value="">
+                    <input id="curtir" src="img/curtir.png" type="image" value="Curtir">
+                </form>
+            </div>
         </div>
         <div class="sombra-down">
         </div>
