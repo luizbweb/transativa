@@ -54,7 +54,7 @@
         <div class="player">
             <div class="play">
             <audio controls autoplay>
-                <source src="http://78.129.190.50:18980;stream.mp3" type="audio/mpeg"></source>
+                <source src="http://95.154.254.81:20289/;playlist.pl" type="audio/mpeg"></source>
             </audio>
             <img src="http://radio.radiotransativa.com/img/img-player-vu-meter.gif" style="margin: 0 0 0 0px;" height="40px" width="100%">
             </div>
@@ -76,7 +76,7 @@
         <div class="sombra-down">
         </div>
         <div class="rodape">
-            <img id="anuncio" class="anuncio" src="img/supercompras.jpg" />
+            <img id="anuncio" class="anuncio" src="http://luizbweb.esy.es/transativa/anuncios/supercompras.jpg" />
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
         <script>
@@ -141,22 +141,21 @@
                     }
                 });
             });
-
             var img = document.getElementById('anuncio');
-            var n = 1;
-            function mudaAnuncio() {
-                try {
-                    img.src = 'img/' + n + '.jpg';
-                    n += 1;
-                    if (n>9){
-                        n = 1;
-                    }
-                }
-                catch (err) {
+        var n = 1;
+        function mudaAnuncio() {
+            try {
+                img.src = 'http://luizbweb.esy.es/transativa/anuncios/' + n + '.jpg';
+                n += 1;
+                if (n>9){
                     n = 1;
                 }
             }
-            setInterval (mudaAnuncio, 3000);
+            catch (err) {
+                n = 1;
+            }
+        }
+        setInterval (mudaAnuncio, 3000);
         </script>
     </body>
 </html>
