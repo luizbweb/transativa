@@ -43,21 +43,21 @@
         }
         #curtir {
             padding-top: 10px;
-            padding-left: 10px;
+            padding-left: 0px;
         }
         #curtir:active {
             background-image: url("img/active-curtir.png");
             background-repeat: no-repeat;
-            background-position: 8px 9px;
+            background-position: 0px 9px;
         }
         #descurtir {
             padding-top: 12px;
-            padding-right: 10px;
+            padding-right: 0px;
         }
         #descurtir:active {
             background-image: url("img/active-descurtir.png");
             background-repeat: no-repeat;
-            background-position: -1px 11px;
+            background-position: 0px 11px;
         }
         .form2 {
             float: left;
@@ -100,14 +100,14 @@
                 <form id="form2" method="post">
                     <input type="hidden" name="curti" value="descurti">
                     <input id="time" type="hidden" name="time" value="">
-                    <input id="descurtir" src="img/descurtir.png" type="image" value="Descurtir">
+                    <a href="#" ><img id="curtir" src="img/curtir.png"></a>
                 </form>
             </div>
             <div class="form">
                 <form id="form" method="post">
                     <input type="hidden" name="curti" value="curti">
                     <input id="time" type="hidden" name="time" value="">
-                    <input id="curtir" src="img/curtir.png" type="image" value="Curtir">
+                    <a href="#" ><img id="descurtir" src="img/descurtir.png"></a> 
                 </form>
             </div>
         </div>
@@ -124,7 +124,7 @@
             }
             marcaHora();
 
-            $('input[id=descurtir]').click(function(e){
+            $('img[id=descurtir]').click(function(e){
             //setamos para quando submeter não atualizar a pagina
                 e.preventDefault();
             //o serialize retorna uma string pronta para ser enviada
@@ -152,7 +152,7 @@
                 });
             });
 
-            $('input[id=curtir]').click(function(e){
+            $('img[id=curtir]').click(function(e){
             //setamos para quando submeter não atualizar a pagina
                 e.preventDefault();
             //o serialize retorna uma string pronta para ser enviada
