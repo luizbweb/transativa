@@ -120,7 +120,7 @@
         <div class="sombra-down">
         </div>
         <div class="rodape">
-            <img id="anuncio" class="anuncio" src="http://luizbweb.esy.es/transativa/anuncios/supercompras.jpg" />
+            <img id="anuncio" class="anuncio" src="img/supercompras.jpg" />
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
         <script>
@@ -185,7 +185,7 @@
                     }
                 });
             });
-            var img = document.getElementById('anuncio');
+        var img = document.getElementById('anuncio');
         var n = 1;
         function mudaAnuncio() {
             try {
@@ -197,6 +197,7 @@
             }
             catch (err) {
                 n = 1;
+                img.src = 'img/supercompras.jpg';
             }
         }
         setInterval (mudaAnuncio, 3000);
