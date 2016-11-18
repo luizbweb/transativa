@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns   = "http://www.w3.org/ns/widgets"
     xmlns:gap   = "http://phonegap.com/ns/1.0"
-    id          = "com.phonegap.example"
-    version     = "0.1.0" >
+    id          = "br.com.cardboardbrazil.radioshow99-5fm"
+    version     = "0.9" >
         <name>Radio Show 99,5 FM</name>
         <description>
             Aplicativo da Radio Show 99,5 FM
